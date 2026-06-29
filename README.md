@@ -29,21 +29,17 @@ qianmo/
 - 响应式设计（移动端适配）
 - 无框架依赖，零构建步骤
 
-## Cloudflare Pages 部署
+# Qianmo Lighting public site
 
-1. 将本项目推送到 GitHub 仓库
-2. 登录 [Cloudflare Dashboard](https://dash.cloudflare.com/)
-3. 进入 **Workers & Pages** → **Pages** → **连接到 Git**
-4. 选择 GitHub 仓库，配置：
-   - **构建命令**：留空（纯静态无需构建）
-   - **输出目录**：`public`
-5. 点击部署
+Static website files for Cloudflare Pages.
 
-## 本地预览
+Cloudflare Pages settings:
+- Framework preset: None
+- Build command: exit 0
+- Build output directory: public
 
-```bash
-# 任意静态服务器均可，例如：
-npx serve public
-# 或 Python
-python -m http.server 8080 -d public
-```
+Pages:
+- /
+- /services/
+- /projects/
+- /contact/
