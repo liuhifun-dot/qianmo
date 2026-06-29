@@ -1,45 +1,10 @@
-/* Qianmo Lighting — static site interactions */
-(function () {
-  'use strict';
 
-  var navToggle = document.querySelector('[data-nav-toggle]');
-  var nav = document.querySelector('[data-nav]');
-
-  if (navToggle && nav) {
-    navToggle.addEventListener('click', function () {
-      var isOpen = nav.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', String(isOpen));
-    });
-
-    nav.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        nav.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
-
-  var contactForm = document.getElementById('contactForm');
-
-  if (contactForm) {
-    contactForm.addEventListener('submit', function (event) {
-      event.preventDefault();
-
-      var data = new FormData(contactForm);
-      var subject = 'Project inquiry from qianmolighting.com';
-      var body = [
-        'Name: ' + (data.get('name') || ''),
-        'Email: ' + (data.get('email') || ''),
-        'Company: ' + (data.get('company') || ''),
-        'Country / Region: ' + (data.get('country') || ''),
-        'Project Type: ' + (data.get('type') || ''),
-        '',
-        'Message:',
-        data.get('message') || ''
-      ].join('\n');
-
-      window.location.href = 'mailto:sales@qianmolighting.com?subject=' +
-        encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    });
-  }
+(function(){
+  const header=document.querySelector('[data-header]');
+  const set=()=>{ if(header){ header.classList.toggle('is-scrolled', window.scrollY>20); } };
+  set(); window.addEventListener('scroll', set, {passive:true});
+  const btn=document.querySelector('[data-menu-button]'); const menu=document.querySelector('[data-menu]');
+  if(btn&&menu){ btn.addEventListener('click',()=>{ const open=menu.classList.toggle('open'); btn.setAttribute('aria-expanded',open?'true':'false'); }); }
+  const path=window.location.pathname;
+  document.querySelectorAll('.qm-nav a').forEach(a=>{ if(a.getAttribute('href')===path || (path!=='/' && a.getAttribute('href')!=='/' && path.startsWith(a.getAttribute('href')))) a.classList.add('is-active'); });
 })();
