@@ -1,6 +1,6 @@
-# 千墨 QianMo — 品牌设计与数字创意
+# 千幕 QianMo — 品牌设计与数字创意
 
-千墨官方品牌网站。纯静态站点，可直接部署至 Cloudflare Pages / Vercel / Netlify 等静态托管平台。
+千幕官方品牌网站。纯静态站点，可直接部署至 Cloudflare Pages / Vercel / Netlify 等静态托管平台。
 
 ## 项目结构
 
