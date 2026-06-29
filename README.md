@@ -1,19 +1,37 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="千幕 Qianmu project fields: lighting presentation, website structure and digital content systems.">
-  <link rel="canonical" href="https://qianmolighting.com/projects/">
-  <title>Projects | 千幕 Qianmu</title>
-  <link rel="stylesheet" href="/assets/css/qianmu.css">
-</head>
-<body>
-<header class="site-header"><div class="container header-inner"><a class="brand" href="/"><img class="brand-logo" src="/assets/images/qianmu-logo.png" alt="千幕 Qianmu logo"></a><button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle><span></span><span></span><span></span></button><nav class="site-nav" data-nav><a href="/">Home</a><a href="/services/">Services</a><a class="active" href="/projects/">Projects</a><a href="/contact/">Contact</a></nav></div></header>
-<main>
-  <section class="page-hero"><div class="container-narrow"><span class="eyebrow">Projects</span><h1 class="h1">Selected project directions, not fake case claims.</h1><p class="lead">第一版先用“项目方向”建立能力边界。等你有真实案例图片和项目授权后，再替换成正式案例页。</p></div></section>
-  <section class="section"><div class="container-narrow"><div class="work-grid"><article class="work-card wide dark"><span class="eyebrow light">Lighting</span><h3>Facade and outdoor lighting concept presentation</h3><p>For buildings, bridges, landscape areas and commercial outdoor spaces.</p></article><article class="work-card"><span class="eyebrow">Website</span><h3>Minimal brand websites for project companies</h3><p>Homepage, service page, case page and contact flow.</p></article><article class="work-card"><span class="eyebrow">Content</span><h3>Digital marketing material systems</h3><p>SEO-oriented content for lighting products, projects and technical resources.</p></article></div></div></section>
-  <section class="statement"><div class="container-narrow"><blockquote>“The case page should prove capability before it tries to impress.”</blockquote><cite><strong>Qianmu Case Rule</strong>Use true project facts, clean images and clear outcomes.</cite></div></section>
-  <section class="section"><div class="container-narrow page-layout"><div><h2 class="h2 serif">Case data to prepare</h2></div><div class="index-list"><article class="index-item"><span>01</span><div><h2>Project facts</h2><p>Project type, location, service scope, year, client role and what was delivered.</p></div></article><article class="index-item"><span>02</span><div><h2>Visual proof</h2><p>Before/after images, renderings, diagrams, project photos and process screenshots.</p></div></article><article class="index-item"><span>03</span><div><h2>Decision logic</h2><p>Why the design direction, fixture selection or page structure was chosen.</p></div></article></div></div></section>
-</main>
-<footer class="site-footer"><div class="container-narrow"><div class="footer-top"><div><img class="brand-logo footer-logo" src="/assets/images/qianmu-logo.png" alt="千幕 Qianmu logo"></div><p class="tagline">Light structure studio for project-ready design communication.</p></div><div class="footer-columns"><div class="footer-col"><h3>Services</h3><a href="/services/">Lighting Design</a><a href="/services/">Brand Website</a><a href="/services/">Digital Content</a></div><div class="footer-col"><h3>Projects</h3><a href="/projects/">Facade</a><a href="/projects/">Landscape</a><a href="/projects/">Marketing System</a></div><div class="footer-col"><h3>Company</h3><a href="/contact/">Contact</a><a href="/services/">How We Work</a></div><div class="footer-col"><h3>Social</h3><span>hello@qianmolighting.com</span><span>LinkedIn</span><span>Instagram</span></div></div><div class="footer-bottom"><span>千幕 Qianmu © 2026. All rights reserved.</span><span>qianmolighting.com</span></div></div></footer><script src="/assets/js/qianmu.js"></script>
-</body></html>
+# 千幕 Qianmu — Light Structure Studio Website
+
+A black-and-white static website for Qianmu / 千幕, designed for Cloudflare Workers / Pages deployment from the `public` directory.
+
+## Structure
+
+```txt
+public/
+├── index.html
+├── services/index.html
+├── projects/index.html
+├── contact/index.html
+├── assets/css/qianmu.css
+├── assets/js/qianmu.js
+├── assets/images/qianmu-logo.png
+├── assets/images/qianmu-background.jpg
+├── robots.txt
+├── sitemap.xml
+└── _headers
+```
+
+## Deployment
+
+Cloudflare build settings:
+
+```txt
+Build command: exit 0
+Build output directory: public
+Root directory: empty
+```
+
+## First version notes
+
+- Main brand name: 千幕 / Qianmu
+- English positioning: Light Structure Studio
+- Main visual language: black, white, paper, line, editorial spacing
+- The contact form is static; connect a real form service later.
