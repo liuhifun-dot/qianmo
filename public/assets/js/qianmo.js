@@ -1,4 +1,1 @@
-(function(){
-  const year = document.querySelector('[data-year]');
-  if(year) year.textContent = new Date().getFullYear();
-})();
+// QianMo v06: static site, no heavy runtime needed.

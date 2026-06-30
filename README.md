@@ -1,13 +1,18 @@
-# QianMo Light Structure Studio — Website v05
+# QianMo Light Structure Studio — v06
 
-Static HTML site for Cloudflare Workers/Pages.
+Static HTML site for Cloudflare Workers / Pages.
 
-Deploy settings:
+## Deployment
+
+Cloudflare build settings:
+
 - Build command: `exit 0`
 - Build output directory: `public`
-- Root directory: leave blank
+- Root directory: leave empty
 
-Main standard:
-- Font: `Arial, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif`
-- Radius: 10px
-- Color: black / white / neutral gray only for UI; project images can carry color.
+## Pages
+
+- `/` Home
+- `/services/` Services
+- `/projects/` Projects
+- `/contact/` Contact / content-style brand page
