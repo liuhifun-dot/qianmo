@@ -52,3 +52,50 @@ a{color:inherit;text-decoration:none}img{display:block;max-width:100%}.container
 
 @media (max-width:1100px){:root{--pad:28px;--section:90px}.project-grid{grid-template-columns:repeat(2,1fr)}.service-grid{grid-template-columns:1fr 1fr}.hero-grid,.about-grid,.values-inner{grid-template-columns:1fr;gap:50px}.hero-copy{margin-left:0}.mosaic-cards,.project-strip{grid-template-columns:1fr}.mosaic-stats{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:repeat(2,1fr)}.footer-bottom{grid-template-columns:1fr}}
 @media (max-width:720px){:root{--pad:20px}.header-inner{height:68px}.brand img{height:28px}.site-nav{display:none}.menu-btn{display:block}.home-hero{min-height:760px}.hero-grid{padding:110px 0 70px}.hero-title{font-size:58px}.hero-copy p{font-size:17px}.project-grid,.service-grid{grid-template-columns:1fr}.service-frame{padding:52px 24px}.case-image{height:260px}.footer-top{grid-template-columns:1fr}.footer-tagline{text-align:left}.footer-grid{grid-template-columns:1fr}.footer-col a,.footer-col span{font-size:16px}.about-title{font-size:46px}.about-year{margin-top:70px}.stat-list{border-left:0}.stat-item{padding-left:0}.values-inner h2{font-size:48px}.values-lead{font-size:28px}.value-list{margin-top:40px}.contact-card{grid-template-columns:1fr}.floating-demo{display:none}}
+
+/* ---- v07 refinements: logo visibility, header readability, button motion ---- */
+.site-header{
+  background:rgba(17,13,9,.92);
+  border-bottom:1px solid rgba(255,255,255,.12);
+  backdrop-filter:blur(18px);
+}
+.site-header.light{
+  position:sticky;
+  color:var(--ink);
+  background:rgba(255,255,255,.96);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(18px);
+}
+.brand img{height:42px;max-width:205px;object-fit:contain;background:transparent!important}
+.footer-logo img{width:170px;background:transparent!important}
+
+/* Only the inner circle moves, not the entire pill. */
+.pill-action{transform:none!important;transition:background .3s ease,color .3s ease}
+.pill-action .circle{transition:transform .95s cubic-bezier(.2,.8,.2,1)}
+.pill-action:hover .circle{transform:translate(3px,-3px)}
+
+/* Home floating CTA uses the same inner-circle hover motion. */
+.floating-demo{cursor:pointer}
+.floating-demo span:last-child{transition:transform .95s cubic-bezier(.2,.8,.2,1)}
+.floating-demo:hover span:last-child{transform:translate(3px,-3px)}
+
+/* More breathing room between project-card rows. */
+.project-grid{gap:60px 22px}
+
+/* Services page should be a white full-width page, not a grey framed canvas. */
+.services-page{background:var(--white);padding:90px 0 130px}
+.service-frame{background:var(--white);padding:86px 0;border-radius:0}
+
+/* About/contact page: remove label space after deleting [01] ABOUT US. */
+.about-title{margin-top:0}
+
+/* Full-bleed dark brown module, content still aligned to the same container. */
+.mosaic-section{background:#1b150f;color:#fff}
+.mosaic-box{background:transparent;border-radius:0;padding:90px 0}
+
+/* Footer text scale refinement. */
+.site-footer{padding:76px 0 38px}
+.footer-tagline{font-size:24px}
+.footer-col h4{font-size:14px;margin-bottom:22px}
+.footer-col a,.footer-col span{font-size:16px;line-height:1.85}
+.footer-bottom{font-size:15px}
